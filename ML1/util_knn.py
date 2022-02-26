@@ -6,16 +6,16 @@ import seaborn as sns
 from sklearn.neighbors import KNeighborsClassifier
 
 # Taken from http://scikit-learn.org/stable/auto_examples/neighbors/plot_classification.html
-def plot_classification_iris():
+def plot_classification_digits():
     """
-     Plot knn classification of the iris dataset
+     Plot knn classification of the digits dataset
     """
     # import some data to play with
-    iris = datasets.load_iris()
+    digits = datasets.load_digits()
     
-    X = iris.data[:, :2]  # we only take the first two features. We could
+    X = digits.data[:, :2]  # we only take the first two features. We could
                       # avoid this ugly slicing by using a two-dim dataset
-    y = iris.target
+    y = digits.target
 
     h = .02  # step size in the mesh
     n_neighbors = 15
